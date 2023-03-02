@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rony | Personal Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script> -->
+  </head>
+  <body class="dark">
+    <header>
+      <div class="header-left">
+        <h1>Rony Wahyu Utama</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+              <a target="_blank" href="https://www.github.com/ronywahyuu"
+                >Github</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="btn-theme-wrapper">
+        <!-- rendered from js -->
+      </div>
+    </header>
+
+    <main>
+      <!-- main content -->
+      <div id="content">
+        <article class="article">
+          <h1>Try and Catch pada Javascript</h1>
+          <hr />
+          <p>
+            Dalam programming, error adalah hal yang sangat umum terjadi. error
+            ini bisa terjadi karena berbagai macam hal, seperti kesalahan
+            penulisan kode, kesalahan input pengguna, dan lain sebagainya. error
+            ini akan menghentikan eksekusi kode yang ada di bawahnya. Untuk
+            mengatasi hal ini, kita bisa menggunakan try dan catch.
+          </p>
+          <p>
+            Penulisan kode try-catch untuk menangani error adalah seperti ini
+          </p>
+
+          <!-- code -->
+          <pre>
+            <code class="">
+      try {
+        // kode yang akan di coba
+      } catch (error) {
+        // kode yang akan dijalankan jika terjadi error
+      }
+            </code>
+          </pre>
+          <p>
+            Parameter error di blok catch adalah objek kesalahan yang berisi
+            informasi tentang error. Anda dapat menggunakan objek ini untuk
+            menampilkan pesan error kepada pengguna atau untuk mencatat
+            kesalahan untuk memudahkan proses debugging.
+          </p>
+
+          <p>
+            Berikut adalah contoh penggunaan blok try-catch untuk menangani
+            kesalahan pembagian dengan nol di JavaScript:
+          </p>
+          <pre>
+            <code>
+      try {
+        let result = 10 / 0;
+        console.log(result);
+      } catch (error) {
+        console.log("Error: ", error.message);
+      }
+            </code>
+          </pre>
+
+          <p>
+            Pada kode di atas, blok try berisi kode yang mungkin melemparkan
+            kesalahan pembagian dengan nol. Jika kesalahan terjadi, blok catch
+            akan menangkap kesalahan dan mencatat pesan kesalahan ke konsol.
+            Secara ringkas, blok try-catch adalah alat yang sangat berguna untuk
+            menangani kesalahan dalam pemrograman. Dengan menggunakannya, Anda
+            dapat menangani kesalahan dengan anggun dan mencegah program Anda
+            dari crash.
+          </p>
+        </article>
+      </div>
+
+      <!-- aside content -->
+      <aside>
+        <!-- profile -->
+        <div class="card">
+          <div class="card-header">
+            <h2>Author</h2>
+          </div>
+          <div class="card-body">
+            <img class="profile-img" src="images/rony-full.jpg" alt="" />
+            <h2 class="author-name">Rony Wahyu Utama</h2>
+            <!-- short description -->
+            <p class="card-description">
+              A Frontend Developer who love to learn new things and share
+              knowledge with others.
+            </p>
+          </div>
+        </div>
+
+        <!-- social media -->
+        <div class="card">
+          <div class="card-header">
+            <h2>Let's Connect</h2>
+          </div>
+          <div class="card-body">
+            <ul class="list-social">
+              <li>
+                <a href="mailto:ronywahyu1@gmail.com">
+                  <img
+                    class="social-media-icon"
+                    src="images/icon-gmail.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/ronywahyuuu/"
+                >
+                  <img
+                    class="social-media-icon"
+                    src="images/icon-linkedin.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/ronywahyuu">
+                  <img
+                    class="social-media-icon"
+                    src="images/icon-instagram.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://twitter.com/rnywhyyy">
+                  <img
+                    class="social-media-icon"
+                    src="images/icon-twitter.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Made by Rony Wahyu</p>
+      <p>2023</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

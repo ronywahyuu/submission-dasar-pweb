@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary-color: #007bff;
+  --background-color: #fff;
+  --text-color: #333;
+  --text-color-heading: #333;
+  --text-color-green: #38a169;
+  --bg-card: #f1f1f1;
+  --bg-footer: #575757;
+
+  /* box shadow */
+  --box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  --primary-color: #0cf;
+  --background-color: #333;
+  --text-color: #b1b0b0;
+  --text-color-heading: #fff;
+  --text-color-green: #38a169;
+  --bg-card: #1f1f1f;
+  --bg-footer: #202124;
+
+  /* box shadow */
+  --box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  font-size: 16px;
+  height: 100%;
+}
+
+/* header section */
+header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 60px;
+
+  flex-wrap: wrap;
+  /* box shadow sm */
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  color: var(--text-color-green);
+}
+
+nav {
+  margin-top: 20px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--text-color-green);
+  font-weight: bold;
+}
+li {
+  list-style: none;
+}
+
+#theme-button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#theme-button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+/* main section */
+main {
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+main #content {
+  flex: 3;
+  padding-right: 100px;
+  color: white;
+}
+
+article h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--text-color-heading);
+  margin-bottom: 20px;
+}
+
+article hr {
+  border: 1px solid var(--text-color);
+  opacity: 0.1;
+  margin: 20px 0;
+}
+pre {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(252, 252, 252, 0.03);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(252, 252, 252, 0.03);
+  box-shadow: 0px 0px 15px 1px rgba(252, 252, 252, 0.03);
+}
+
+code {
+  border-radius: 4px;
+  padding: 0;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.9em;
+}
+
+article p {
+  margin: 20px 0;
+  color: var(--text-color);
+  text-align: justify;
+}
+/* sidebar */
+main aside {
+  flex: 1;
+  color: white;
+}
+
+.card {
+  background-color: var(--bg-card);
+  color: var(--text-color);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+}
+
+.card h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #38a169;
+  margin-bottom: 20px;
+}
+
+.card-body .profile-img {
+  border-radius: 100%;
+}
+
+.card-body img {
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+}
+
+.card-body .author-name {
+  color: var(--text-color);
+}
+
+.card-description {
+  color: var(--text-color);
+}
+.list-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* footer section */
+footer {
+  background-color: var(--bg-footer);
+  text-align: center;
+  padding: 30px;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* responsive breakpoint */
+/* max-width 768px */
+@media screen and (max-width: 768px) {
+  header {
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 20px;
+  }
+
+  header h1 {
+    display: none;
+  }
+  header .header-left {
+    margin-bottom: 20px;
+  }
+  main {
+    flex-direction: column;
+    padding: 20px;
+  }
+  main #content {
+    padding-right: 0;
+  }
+  main aside {
+    margin-top: 20px;
+  }
+
+  .card-body img {
+    width: 200px;
+  }
+
+  .card-body .social-media-icon {
+    width: 50px;
+  }
+
+  pre {
+    overflow-x: auto;
+  }
+}
+
+/* max-width 480px */
+@media screen and (max-width: 480px) {
+  #theme-button {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
